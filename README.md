@@ -65,7 +65,7 @@
 <head>
 <style>
   .contenedor-texto {
-    width: 60%; /* Define el ancho del contenedor */
+    width: %; /* Define el ancho del contenedor */
     margin: 0 auto; /* Centra el contenedor horizontalmente */
     text-align: center; /* Centra el texto dentro del contenedor */
     padding: 20px; /* Agrega espacio interno */
