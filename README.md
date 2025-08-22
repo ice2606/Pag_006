@@ -133,8 +133,6 @@ background-color:38F527 ;
 </head>
 <body>
 
- 
-
 </body>
 </html>
 
@@ -142,148 +140,144 @@ background-color:38F527 ;
 
 
 
-
-
-
-<html>
+<html lang="es">
 <head>
-<title>Catálogo</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f5;
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-  }
-  table {
-    width: 100%;
-    max-width: 900px;
-    border-collapse: collapse;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: white;
-    table-layout: fixed; /* Mantiene las columnas de igual ancho */
-  }
- th, td {
-    padding: 15px;
-    text-align: center;
-    border: 1px solid #ddd;
-  }
-  th {
-    background-color: #3f51b5;
-    color: white;
-  }
-  tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  tr:hover {
-    background-color: #f1f1f1;
-  }
-.producto-img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 5px;
-  }
-  .whatsapp-link {
-    display: inline-block;
-    background-color: #25D366;
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  .whatsapp-link:hover {
-    background-color: #128C7E;
-  }
-.precio {
-    font-weight: bold;
-    color: #007bff;
-  }
-  .descripcion {
-    font-size: 14px;
-    color: #666;
-  }
-  /* Media query para pantallas más pequeñas */
-  @media (max-width: 768px) {
-    table, thead, tbody, th, td, tr {
-      display: block;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Producto Destacado</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f6f7fb;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .cuadro-producto {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 350px;
+      width: 90%;
+      margin: 20px;
+      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: box-shadow 0.2s;
+    }
+    .cuadro-producto:hover {
+      box-shadow: 0 8px 24px rgba(52, 152, 219, 0.15);
+    }
+    .foto-producto {
       width: 100%;
+      max-width: 250px;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-bottom: 20px;
     }
-    th {
-      display: none; /* Oculta los encabezados de la tabla en pantallas pequeñas */
+    .descripcion-producto {
+      color: #222;
+      font-size: 1.1em;
+      margin-bottom: 20px;
+      text-align: center;
     }
-    td {
-      border: none;
-      border-bottom: 1px solid #ddd;
-      text-align: left;
-      padding-left: 50%;
-      position: relative;
+    .whatsapp-link {
+      display: inline-block;
+      background-color: #25D366;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-size: 1em;
+      font-weight: 600;
+      transition: background 0.2s;
+      box-shadow: 0 2px 8px rgba(37, 211, 102, 0.15);
     }
-    td:before {
-      content: attr(data-label);
-      position: absolute;
-      top: 6px;
-      left: 6px;
-      width: 45%;
-      padding-right: 10px;
-      white-space: nowrap;
-      font-weight: bold;
+    .whatsapp-link:hover {
+      background-color: #128C7E;
     }
-    .producto-img {
-      display: block;
-      margin: 0 auto;
-    }  }
-</style>
+    @media (max-width: 480px) {
+      .cuadro-producto {
+        padding: 16px 6px;
+      }
+      .descripcion-producto {
+        font-size: 1em;
+      }
+      .whatsapp-link {
+        padding: 10px 18px;
+        font-size: 0.97em;
+      }
+    }
+  </style>
 </head>
 <body>
-<table>
-  <thead>
-    <tr>
-      <th>Foto</th>
-      <th>Descripción</th>
-      <th>Precio</th>
-      <th>Comprar</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td data-label="Foto"><img src="01.jpg" alt="Producto 1" class="producto-img"></td>
-      <td data-label="Descripción"><span class="descripcion">zapatos rosa botin de niña</span></td>
-      <td data-label="Precio"><span class="precio"></span></td>
-      <td data-label="Comprar"><a href="https://wa.me/+505 8990 6649?text=Hola,%20me%20interesa%20el%20Producto%201%20de%20tu%20sitio%20web." class="whatsapp-link" target="_blank">WhatsApp</a></td>
-    </tr>
-    <tr>
-      <td data-label="Foto"><img src="02.jpg" alt="Producto 2" class="producto-img"></td>
-      <td data-label="Descripción"><span class="descripcion">zapatos suela de goma y sport</span></td>
-      <td data-label="Precio"><span class="precio"></span></td>
-      <td data-label="Comprar"><a href="https://wa.me/+505 8990 6649?text=Hola,%20me%20interesa%20el%20Producto%202%20de%20tu%20sitio%20web." class="whatsapp-link" target="_blank">WhatsApp</a></td>
-    </tr>
-    <tr>
-      <td data-label="Foto"><img src="03.jpg" alt="Producto 3" class="producto-img"></td>
-      <td data-label="Descripción"><span class="descripcion">zapatos suela de goma</span></td>
-      <td data-label="Precio"><span class="precio"></span></td>
-      <td data-label="Comprar"><a href="https://wa.me/+505 8990 6649?text=Hola,%20me%20interesa%20el%20Producto%203%20de%20tu%20sitio%20web." class="whatsapp-link" target="_blank">WhatsApp</a></td>
-    </tr>
-  <tr>
-      <td data-label="Foto"><img src="04.jpg" alt="Producto 1" class="producto-img"></td>
-      <td data-label="Descripción"><span class="descripcion">retro 4 fashion juvenil </span></td>
-      <td data-label="Precio"><span class="precio"></span></td>
-      <td data-label="Comprar"><a href="https://wa.me/+505 8990 6649?text=Hola,%20me%20interesa%20el%20Producto%201%20de%20tu%20sitio%20web." class="whatsapp-link" target="_blank">WhatsApp</a></td>
-    </tr>
-  <tr>
-      <td data-label="Foto"><img src="05.jpg" alt="Producto 1" class="producto-img"></td>
-      <td data-label="Descripción"><span class="descripcion">retro 4 unisex </span></td>
-      <td data-label="Precio"><span class="precio"></span></td>
-      <td data-label="Comprar"><a href="https://wa.me/+505 8990 6649?text=Hola,%20me%20interesa%20el%20Producto%201%20de%20tu%20sitio%20web." class="whatsapp-link" target="_blank">WhatsApp</a></td>
-    </tr>
-    </tbody>
-</table>
+  <div class="cuadro-producto">
+    <img src="01.jpg" alt="Foto del Producto" class="foto-producto">
+    <div class="descripcion-producto">
+    zapatos rosa estilo botin 
+    </div>
+    <a href="https://wa.me/50589906649?text=Hola%2C%20me%20interesa%20el%20producto%20de%20tu%20sitio%20web." class="whatsapp-link" target="_blank">
+      Consultar por WhatsApp
+    </a>
+  </div>
 </body>
 </html>
+
+<body>
+  <div class="cuadro-producto">
+    <img src="02.jpg" alt="Foto del Producto" class="foto-producto">
+    <div class="descripcion-producto">
+      zapatos de goma color negro deportivos 
+    </div>
+    <a href="https://wa.me/50589906649?text=Hola%2C%20me%20interesa%20el%20producto%20de%20tu%20sitio%20web." class="whatsapp-link" target="_blank">
+      Consultar por WhatsApp
+    </a>
+  </div>
+</body>
+
+
+<body>
+  <div class="cuadro-producto">
+    <img src="03.jpg" alt="Foto del Producto" class="foto-producto">
+    <div class="descripcion-producto">
+     zapatos color negro suela de goma deportivos 
+    </div>
+    <a href="https://wa.me/50589906649?text=Hola%2C%20me%20interesa%20el%20producto%20de%20tu%20sitio%20web." class="whatsapp-link" target="_blank">
+      Consultar por WhatsApp
+    </a>
+  </div>
+</body>
+
+<body>
+  <div class="cuadro-producto">
+    <img src="04.jpg" alt="Foto del Producto" class="foto-producto">
+    <div class="descripcion-producto">
+      retro 4 fashion
+    </div>
+    <a href="https://wa.me/50589906649?text=Hola%2C%20me%20interesa%20el%20producto%20de%20tu%20sitio%20web." class="whatsapp-link" target="_blank">
+      Consultar por WhatsApp
+    </a>
+  </div>
+</body>
+
+
+<body>
+  <div class="cuadro-producto">
+    <img src="05.jpg" alt="Foto del Producto" class="foto-producto">
+    <div class="descripcion-producto">
+     retro 4 unisex 
+    </div>
+    <a href="https://wa.me/50589906649?text=Hola%2C%20me%20interesa%20el%20producto%20de%20tu%20sitio%20web." class="whatsapp-link" target="_blank">
+      Consultar por WhatsApp
+    </a>
+  </div>
+</body>
+
 
 
 
